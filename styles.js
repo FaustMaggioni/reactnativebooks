@@ -6,18 +6,14 @@ export const styles = StyleSheet.create({
       textAlign: 'center',
       borderRadius: 15,
     },
-    input:{
-        flexDirection: 'row',
-        borderBottomColor: 'black',
-        borderBottomWidth: 1,
-    },
     blanco:{
         color:'white'
-    },
+    }, 
     todo:{
         textAlign:'center',
-        fontSize: 30,
-        fontWeight: '700'
+        fontSize: 40,
+        fontWeight: '400',
+        backgroundColor: 'whitesmoke',
     },
     title:{
         flex: 1,

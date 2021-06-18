@@ -16,7 +16,15 @@ export const styles = StyleSheet.create({
         backgroundColor: 'white',
         borderRadius: 15,
         borderBottomWidth: 1,
-        borderBottomColor: 'gray'
+        borderBottomColor: 'gray',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
     },
     date:{
         maxWidth: '90%'
@@ -27,21 +35,43 @@ export const styles = StyleSheet.create({
         fontWeight: '500'
     },
     modalItem:{
-        marginLeft: '2%',
-        marginRight: '2%',
-        marginTop: 'auto',
-        marginBottom: 'auto',
         backgroundColor: 'white',
         justifyContent: 'center',
-        borderRadius: 5,
+        width: '80%',
+        borderRadius: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 50,
+            height: 10,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 30,
+        elevation: 5,
     },
     botones:{
-        marginLeft: 'auto',
-        marginRight: 'auto'
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        borderTopColor: 'gray',
+        borderTopWidth: 0.5,
+        textAlign: 'center'
     },
     txt:{
         textAlign: 'center',
-        fontSize: 30,
+        fontSize: 20,
         fontWeight: '300'
+    },
+    btn:{
+        flex: 1,
+        textAlign: 'center',
+        borderWidth: 0.5,
+        borderColor: 'gray'
+    },
+    dif:{
+        backgroundColor: 'rgba(0,0,0,0.3)'
+    },
+    modal:{
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100%'
     }
   });
