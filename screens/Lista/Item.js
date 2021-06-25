@@ -1,5 +1,5 @@
 import React, {useState}  from 'react'
-import { Button, Text, View } from 'react-native';
+import { Button, Text, View, Pressable } from 'react-native';
 import {styles} from './styles'
 import Modal from './Modal'
 
@@ -14,9 +14,13 @@ const Item = ({ item,data,setData }) => {
             return(
             <View style={styles.item}>
               <Text style={styles.title}>{item.title}</Text>
-              <Button title='X' onPress={()=> {
-                onHandlerModal(item.id)}}
-                />
+              <Text> {item.subtitle} </Text>
+              <View style={styles.btns}>
+                <Button title='<3'/>
+                <Button title='Eliminar' onPress={()=> {
+                  onHandlerModal(item.id)}}
+                  />
+              </View>
               <Modal item={itemSelected} setModalVisible={setModalVisible} setItemSelected={setItemSelected} data={data} setData={setData} visible={modalVisible}/>
             </View>)
         };

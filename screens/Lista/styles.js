@@ -1,19 +1,21 @@
 import {StyleSheet} from 'react-native';
+import {COLORS} from '../../constants/colors'
 
 export const styles = StyleSheet.create({
     lista:{
-        marginTop: '5%',
-        width: '80%',
         marginLeft: 'auto',
         marginRight: 'auto',
+        width: '80%',
         borderRadius: 15,
+        height: '80%'
     },
     item:{
-        margin: '3%',
-        flexDirection: 'row',
+        marginVertical: '7%',
+        flexDirection: 'column',
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: 'white',
+        width: '100%',
+        backgroundColor: COLORS.secondary,
         borderRadius: 15,
         borderBottomWidth: 1,
         borderBottomColor: 'gray',
@@ -26,13 +28,19 @@ export const styles = StyleSheet.create({
         shadowRadius: 3.84,
         elevation: 5,
     },
-    date:{
-        maxWidth: '90%'
+    btns:{
+        flexDirection: 'row',
+        backgroundColor: 'rgba(0,0,0,0.15)',
+        width: '100%',
+        borderBottomLeftRadius: 15,
+        borderBottomRightRadius: 15,
+        justifyContent: 'center',
+        marginTop: '5%'
     },
     title:{
         flex: 1,
         padding: 5,
-        fontWeight: '500'
+        fontWeight: '500',
     },
     modalItem:{
         backgroundColor: 'white',
@@ -58,7 +66,7 @@ export const styles = StyleSheet.create({
     txt:{
         textAlign: 'center',
         fontSize: 20,
-        fontWeight: '300'
+        fontWeight: '400'
     },
     btn:{
         flex: 1,

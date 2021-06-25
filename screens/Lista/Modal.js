@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal as RNModal, Button,SafeAreaView, View,  Text } from 'react-native';
+import { Modal as RNModal, Button, View,  Text } from 'react-native';
 import {styles} from './styles.js'
 
 const Modal = ({item, data, setItemSelected, setModalVisible, setData, visible}) =>{
