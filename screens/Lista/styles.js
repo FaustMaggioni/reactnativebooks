@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {COLORS} from '../../constants/colors'
+import {COLORS, AZULES} from '../../constants/colors'
 
 export const styles = StyleSheet.create({
     lista:{
@@ -9,38 +9,33 @@ export const styles = StyleSheet.create({
         borderRadius: 15,
         height: '80%'
     },
-    item:{
-        marginVertical: '7%',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        width: '100%',
-        backgroundColor: COLORS.secondary,
-        borderRadius: 15,
-        borderBottomWidth: 1,
-        borderBottomColor: 'gray',
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
-    },
     btns:{
         flexDirection: 'row',
         backgroundColor: 'rgba(0,0,0,0.15)',
         width: '100%',
-        borderBottomLeftRadius: 15,
-        borderBottomRightRadius: 15,
-        justifyContent: 'center',
-        marginTop: '5%'
+        borderBottomLeftRadius: 5,
+        borderBottomRightRadius: 5,
+        justifyContent: 'space-around',
+    },
+    touchable:{
+        paddingVertical: '5%',
+        alignItems: 'center',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 2,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 1.84,
+        elevation: 5,
+        backgroundColor: 'white',
+        marginTop: 10
     },
     title:{
         flex: 1,
         padding: 5,
-        fontWeight: '500',
+        fontFamily: 'sansbold',
+        fontSize: 25
     },
     modalItem:{
         backgroundColor: 'white',

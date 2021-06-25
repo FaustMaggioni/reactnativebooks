@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {COLORS} from '../../constants/colors'
+import {COLORS, AZULES} from '../../constants/colors'
 
 export const styles = StyleSheet.create({
     todo: {
@@ -7,9 +7,10 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 40,
         fontWeight: '300',
+        fontFamily: 'sanspro'
     },
     header: {
-        backgroundColor: `${COLORS.terciary}`,
+        backgroundColor: `${AZULES.light}`,
         paddingTop: '5%',
         shadowColor: "#000",
         shadowOffset: {

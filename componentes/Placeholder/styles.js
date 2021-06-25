@@ -7,15 +7,21 @@ export const styles = StyleSheet.create({
         alignSelf: 'center',
         borderRadius: 10,
     },
-    cardtext:{
+    cardTitle:{
         fontSize: 30,
-        fontWeight: '300',
         textAlign: 'center',
-        color: COLORS.secondary
+        color: 'black',
+        fontFamily: 'sanspro',
+    },
+    cardSubtitle:{
+        fontSize: 20,
+        color: 'black',
+        fontFamily: 'sanslight',
     },
     stretch:{
         width: 200,
         height: 200,
+        alignSelf: 'center',
         resizeMode: "cover"
     }
 }

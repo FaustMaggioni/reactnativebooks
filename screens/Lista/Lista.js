@@ -3,16 +3,23 @@ import {FlatList, View, Button } from 'react-native';
 import {styles} from './styles.js'
 import Item from './Item'
 import Input from './Input/Input'
-import Card from '../../componentes/Card/Card'
- 
-const Lista = ({data, setData, setGame}) =>{
+import Placeholder from '../../componentes/Placeholder/Placeholder'
+import Articulo  from '../ArticuloScreen/Articulo.js';
+
+const Lista = ({data, setData}) =>{
 
     const [visible, setVisible] = useState(false)
-    
-    const renderItem = ({ item }) => (
-        <Item style={styles.title} item={item} data={data} setData={setData} />
-      );
+    const [articulo, setItem] = useState()
 
+    const renderItem = ({ item }) => (
+        <Item style={styles.title} setItem={setItem} item={item} data={data} setData={setData} />
+      );
+    
+    if(articulo){
+      return(
+        <Articulo setItem={setItem} title={articulo.title} subtitle={articulo.subtitle}/>
+      )
+    }
 
     return (
       <View style={styles.listaContainer}>
@@ -22,7 +29,7 @@ const Lista = ({data, setData, setGame}) =>{
         data={data}
         refreshing={false}
         onRefresh={() => setVisible(true)}
-        ListEmptyComponent= { <Card title='Refresca para agregar un libro'/> }
+        ListEmptyComponent= { <Placeholder title='No has escrito nada aún' subtitle='Refresca para escribir algo!'/> }
         extraData={item => item.id}
         renderItem={renderItem}
         keyExtractor={item => item.id}

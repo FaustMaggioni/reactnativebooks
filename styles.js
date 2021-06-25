@@ -1,10 +1,16 @@
 import {StyleSheet} from 'react-native';
-import {COLORS} from './constants/colors'
+import {COLORS, AZULES} from './constants/colors'
 
 export const styles = StyleSheet.create({
     container: {
-        backgroundColor: COLORS.primary,
+        backgroundColor: AZULES.primary,
         height: '100%',
         fontFamily: 'benne'
+    },
+    txt:{
+        textAlign: 'center',
+        fontFamily: 'sanspro',
+        color: 'white',
+        fontSize: 30
     }
   });

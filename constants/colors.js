@@ -5,3 +5,11 @@ export const COLORS = {
     cuaternary:  '#5D576B',
     fifth: '#f7b32b'
 }
+
+export const AZULES = {
+    primary: '#F6F7EB',
+    light: '#5899E2',
+    dark: '#335C81',
+    accent: '#65AFFF'
+
+}

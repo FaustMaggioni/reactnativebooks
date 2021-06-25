@@ -1,10 +1,10 @@
 import {StyleSheet} from 'react-native';
-import {COLORS} from '../../../constants/colors'
+import {COLORS, AZULES} from '../../../constants/colors'
 
 export const styles = StyleSheet.create({
     input:{
         width: '100%',
-        backgroundColor: COLORS.fifth,
+        backgroundColor: AZULES.accent,
         alignItems: 'center'
     },
     add:{
@@ -25,15 +25,17 @@ export const styles = StyleSheet.create({
         marginTop: 6
     },
     form:{
-        backgroundColor: COLORS.primary,
+        backgroundColor: AZULES.light,
         justifyContent: 'center',
         paddingHorizontal: 10,
         height: '100%'
     },
     btnContainer:{
-        marginTop: 10,
-        borderRadius: 5,
-        backgroundColor: COLORS.secondary
+        marginTop: 15,
+        borderRadius: 10,
+        backgroundColor: 'gainsboro',
+        flexDirection: 'row',
+        justifyContent: 'space-around'
     },
     container: {
         flex: 1
@@ -41,12 +43,27 @@ export const styles = StyleSheet.create({
     btn:{
         borderTopWidth: 0.5,
         borderColor: 'gray',
-        backgroundColor: COLORS.secondary
+        flex: 1,
+        height: 40,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    añadir:{
+        backgroundColor: AZULES.accent,
+        borderTopRightRadius: 10,
+        borderBottomRightRadius: 10,
+    },
+    cancelar:{
+        backgroundColor: AZULES.primary,
+        borderTopLeftRadius: 10,
+        borderBottomLeftRadius: 10,
     },
     leer:{
         textAlign: 'center',
         fontSize: 30,
+        color: AZULES.primary,
         fontWeight: '600',
+        fontFamily: 'sansbold',
         opacity: 0.8,
     },
     stretch:{

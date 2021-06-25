@@ -5,7 +5,7 @@ import {styles} from './styles.js'
 const Header = () =>{
     return (
         <View style={styles.header}>
-            <Text style={styles.todo}> Our Reads </Text>
+            <Text style={styles.todo}> Medium </Text>
         </View>
     )
 }

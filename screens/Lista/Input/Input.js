@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {View,Button,Modal,Image, Text, KeyboardAvoidingView,TouchableWithoutFeedback, Keyboard} from 'react-native'
+import {View,Button,TouchableHighlight,Modal,Image, Text, KeyboardAvoidingView,TouchableWithoutFeedback, Keyboard} from 'react-native'
 import {styles} from './styles.js'
 import InputGen from '../../../componentes/InputStyle/InputGen'
 
@@ -38,7 +38,7 @@ const Input = ({data,setData, visible, setVisible}) => {
         <Modal animationType='slide' visible={visible} >
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.form}>
-          <Text style={styles.leer}> ¿Cual es el proximo libro que queres leer? </Text>
+          <Text style={styles.leer}> ¿Con qué artículo nos vas a deleitar hoy? </Text>
           <Image
             style={styles.stretch}
             source={require('../../../assets/libros.png')}
@@ -48,16 +48,20 @@ const Input = ({data,setData, visible, setVisible}) => {
               style={[styles.title, styles.txtInput] }
               value={title} 
               onChangeText={setTitle} 
-              placeholder='Title'/>
+              placeholder='Titulo'/>
           <InputGen  
               onSubmitEditing= {() => addItem()}
               style={[styles.title, styles.txtInput] }
               value={subtitle} 
               onChangeText={setSubtitle} 
-              placeholder='Subtitle'/>
+              placeholder='Subtitulo'/>
           <View style={styles.btnContainer}>
-            <Button style={styles.btn} title='Añadir' onPress={() => addItem()}/>
-            <Button style={styles.btn} title='Cancelar' onPress={() => setVisible(false)}/>
+          <TouchableHighlight style={[styles.btn, styles.cancelar]} onPress={() => setVisible(false)}>
+              <Text> Cancelar </Text>
+            </TouchableHighlight>
+            <TouchableHighlight style={[styles.btn, styles.añadir]} onPress={() => addItem()}>
+              <Text> Añadir </Text>
+            </TouchableHighlight>
           </View>
         </View>
         </TouchableWithoutFeedback>
