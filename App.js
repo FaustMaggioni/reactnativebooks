@@ -4,17 +4,25 @@ import {View } from 'react-native';
 import {styles} from './styles.js'
 import Lista from './screens/Lista/Lista'
 import Header from './componentes/Header/Header'
-import GameScreen from './screens/GameScreen/GameScreen'
+import * as Font from 'expo-font'
+import AppLoading from 'expo-app-loading'
+
 
 const App = () => {
 
   const [data, setData] = useState([])
-  const [game,setGame] = useState(false)
-
+  const [dataLoaded] = Font.useFonts({
+    'benne': require('./assets/fonts/Benne-Regular.ttf')
+  })
+  if(!dataLoaded){
+    return(
+      <AppLoading/>
+    )
+  }
   return (
       <View style={styles.container} >
         <Header/>
-        <Lista data={data} setGame={setGame} ssetData={setData} />
+        <Lista data={data} setData={setData} />
         <StatusBar style="auto" />
       </View>
   );

@@ -15,7 +15,8 @@ export const styles = StyleSheet.create({
     },
     stretch:{
         width: 200,
-        height: 200
+        height: 200,
+        resizeMode: "cover"
     }
 }
 )

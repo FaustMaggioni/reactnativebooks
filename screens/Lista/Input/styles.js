@@ -22,6 +22,7 @@ export const styles = StyleSheet.create({
     },
     txtInput:{
         backgroundColor: 'white',
+        marginTop: 6
     },
     form:{
         backgroundColor: COLORS.primary,
@@ -39,6 +40,19 @@ export const styles = StyleSheet.create({
     },
     btn:{
         borderTopWidth: 0.5,
-        borderColor: 'gray'
+        borderColor: 'gray',
+        backgroundColor: COLORS.secondary
+    },
+    leer:{
+        textAlign: 'center',
+        fontSize: 30,
+        fontWeight: '600',
+        opacity: 0.8,
+    },
+    stretch:{
+        height: 100,
+        width: 100,
+        resizeMode: 'cover',
+        alignSelf: 'center'
     }
 })

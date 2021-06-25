@@ -5,5 +5,6 @@ export const styles = StyleSheet.create({
     container: {
         backgroundColor: COLORS.primary,
         height: '100%',
+        fontFamily: 'benne'
     }
   });

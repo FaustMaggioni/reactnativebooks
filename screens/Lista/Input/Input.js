@@ -1,7 +1,10 @@
 import React, {useState} from 'react'
-import {View,Button,Modal, KeyboardAvoidingView,TouchableWithoutFeedback, Keyboard} from 'react-native'
+import {View,Button,Modal,Image, Text, KeyboardAvoidingView,TouchableWithoutFeedback, Keyboard} from 'react-native'
 import {styles} from './styles.js'
 import InputGen from '../../../componentes/InputStyle/InputGen'
+
+
+
 const Input = ({data,setData, visible, setVisible}) => {
 
     const [title, setTitle] = useState()
@@ -35,6 +38,11 @@ const Input = ({data,setData, visible, setVisible}) => {
         <Modal animationType='slide' visible={visible} >
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.form}>
+          <Text style={styles.leer}> ¿Cual es el proximo libro que queres leer? </Text>
+          <Image
+            style={styles.stretch}
+            source={require('../../../assets/libros.png')}
+            />
           <InputGen  
               onSubmitEditing= {() => addItem()}
               style={[styles.title, styles.txtInput] }

@@ -11,7 +11,7 @@ const Card = ({title}) => {
             <Image
             style={styles.stretch}
             source={require('../../assets/books.png')}
-      />
+            />
         </View>
     )
 }
