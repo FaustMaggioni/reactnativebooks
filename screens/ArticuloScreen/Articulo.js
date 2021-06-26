@@ -14,7 +14,7 @@ const Articulo = ({title,subtitle, setItem}) => {
                 activeOpacity={0.6}
                 underlayColor="#DDDDDD"
                 style={styles.volver} onPress={()=> setItem()}>
-                <Text> Volver </Text>
+                <Text style={styles.floating}> Volver </Text>
             </TouchableHighlight>
         </ScrollView>
     )

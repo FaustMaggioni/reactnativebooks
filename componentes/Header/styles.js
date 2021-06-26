@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'sanspro'
     },
     header: {
-        backgroundColor: `${AZULES.light}`,
+        backgroundColor: AZULES.dark,
         paddingTop: '5%',
         shadowColor: "#000",
         shadowOffset: {

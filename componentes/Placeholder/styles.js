@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
         paddingVertical: 'auto',
         alignSelf: 'center',
         borderRadius: 10,
+        backgroundColor: 'rgba(255,255,255,0.9)'
     },
     cardTitle:{
         fontSize: 30,
@@ -17,6 +18,7 @@ export const styles = StyleSheet.create({
         fontSize: 20,
         color: 'black',
         fontFamily: 'sanslight',
+        textAlign: 'center',
     },
     stretch:{
         width: 200,

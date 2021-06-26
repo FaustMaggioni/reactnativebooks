@@ -3,7 +3,6 @@ import {COLORS, AZULES} from './constants/colors'
 
 export const styles = StyleSheet.create({
     container: {
-        backgroundColor: AZULES.primary,
         height: '100%',
         fontFamily: 'benne'
     },
@@ -12,5 +11,8 @@ export const styles = StyleSheet.create({
         fontFamily: 'sanspro',
         color: 'white',
         fontSize: 30
+    },
+    main:{
+        flex: 1
     }
   });

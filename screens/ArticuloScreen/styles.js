@@ -14,16 +14,18 @@ export const styles = StyleSheet.create({
     },
     body:{
         textAlign: 'left',
-        width: '90%',
+        width: '100%',
         backgroundColor: 'white',
-        marginLeft: 15,
         marginTop: 20,
         fontFamily: 'sanslight',
-        borderRadius: 20
+        borderRadius: 20,
+        padding: 10
     },
     articulo:{
-        height: '80%',
-        marginBottom: 50
+        height: '100%',
+        marginBottom: 10,
+        marginTop: 10,
+        position: 'relative'
     },
     volver:{
         position: 'absolute',
@@ -32,7 +34,18 @@ export const styles = StyleSheet.create({
         backgroundColor: AZULES.accent,
         borderRadius: 5,
         height: 30,
-        justifyContent: 'center'
+        resizeMode: 'contain',
+        alignItems: 'center',
+        justifyContent: 'center',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 5,
     }
 
 })

@@ -1,12 +1,7 @@
-import {StyleSheet} from 'react-native';
-import {COLORS, AZULES} from '../../../constants/colors'
+import { StyleSheet } from "react-native";
+import { AZULES } from "../../../../constants/colors";
 
 export const styles = StyleSheet.create({
-    input:{
-        width: '100%',
-        backgroundColor: AZULES.accent,
-        alignItems: 'center'
-    },
     add:{
         color:'white',
         textAlign: 'center',
@@ -36,9 +31,6 @@ export const styles = StyleSheet.create({
         backgroundColor: 'gainsboro',
         flexDirection: 'row',
         justifyContent: 'space-around'
-    },
-    container: {
-        flex: 1
     },
     btn:{
         borderTopWidth: 0.5,
