@@ -18,7 +18,7 @@ const App = () => {
       <AppLoading/>
     )
   }
-
+  
   return (
     <ThemeProvider>
         <Vista />

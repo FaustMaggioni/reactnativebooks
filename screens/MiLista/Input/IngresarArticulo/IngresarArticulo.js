@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {View, Text, TouchableHighlight,Modal,Image,TouchableWithoutFeedback, Keyboard} from 'react-native'
+import {View, Text, TouchableHighlight,Modal,Image,TouchableWithoutFeedback, Keyboard, KeyboardAvoidingView} from 'react-native'
 import InputGen from '../../../../componentes/InputStyle/InputGen'
 import {styles} from './styles.js'
 import { AZULES } from '../../../../constants/colors'
@@ -30,7 +30,7 @@ const IngresarArticulo = ({setVisible, visible, setData, data}) => {
     return (
         <Modal animationType='slide' visible={visible} >
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View style={styles.form}>
+        <KeyboardAvoidingView style={styles.form} keyboardVerticalOffset={30} behavior='padding'>
           <Text style={styles.leer}> ¿Qué vas a escribir hoy? </Text>
           <Image style={styles.stretch} source={require('../../../../assets/libros.png')} />
           <InputGen onSubmitEditing= {() => addItem()} style={[styles.title, styles.txtInput] } value={title} onChangeText={setTitle} placeholder='Titulo'/>
@@ -43,7 +43,7 @@ const IngresarArticulo = ({setVisible, visible, setData, data}) => {
               <Text> Añadir </Text>
             </TouchableHighlight>
           </View>
-        </View>
+        </KeyboardAvoidingView>
         </TouchableWithoutFeedback>
         </Modal>
     )
