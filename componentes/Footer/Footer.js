@@ -25,7 +25,6 @@ const Footer = () => {
 
 const styles = StyleSheet.create({
     footer:{
-        height: 'fitContent',
         borderBottomWidth: 0.5,
         backgroundColor: AZULES.light,
         color: 'white',

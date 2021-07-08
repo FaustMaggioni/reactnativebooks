@@ -5,18 +5,27 @@ import Modal from '../Modal/Modal'
 import { AZULES } from '../../../constants/colors';
 import Card from '../../../componentes/Card/Card';
 
-const Item = ({ item,data,setData, setItem }) => {
+const Item = ({ item,data,setData,navigation }) => {
 
     const [modalVisible, setModalVisible] = useState(false)
     const [itemSelected, setItemSelected] = useState({})
-
+    
     const onHandlerModal = () => {
       setItemSelected(item)
       setModalVisible(!modalVisible)
     }
             return(
             <Card >
-              <TouchableHighlight style={styles.touchable} activeOpacity={0.3} underlayColor={AZULES.accent} onPress={() => setItem(item)}>
+              <TouchableHighlight style={styles.touchable} 
+              activeOpacity={0.3} underlayColor={AZULES.accent} 
+              onPress={() => {
+                navigation.navigate('Articulo', 
+                {
+                  title: item.title,
+                  subtitle: item.subtitle,
+                }
+                )
+                }}>
                 <>
                   <Text style={styles.title}>{item.title}</Text>
                   <Text style={styles.subtitle}> {item.subtitle} </Text>

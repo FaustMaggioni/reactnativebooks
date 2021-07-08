@@ -2,7 +2,7 @@ import React from 'react'
 import {FlatList, StyleSheet} from 'react-native'
 
 
-const Lista = ({style, data, renderItem, ...props}) => {
+const Lista = ({style={}, data, renderItem, ...props}) => {
     return (
         <FlatList 
         style={[style, styles.lista]}

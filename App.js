@@ -5,7 +5,6 @@ import AppLoading from 'expo-app-loading'
 import {ThemeProvider} from './themes/theme-context'
 import Vista from './Vista'
 
-
 const App = () => {
 
   const [dataLoaded] = Font.useFonts({
@@ -18,12 +17,11 @@ const App = () => {
       <AppLoading/>
     )
   }
-  
   return (
     <ThemeProvider>
-        <Vista />
-        <StatusBar style="light" />
-      </ThemeProvider>
+      <Vista />
+      <StatusBar style="auto" />
+    </ThemeProvider>
   );
 }
 
