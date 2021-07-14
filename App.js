@@ -4,6 +4,8 @@ import * as Font from 'expo-font'
 import AppLoading from 'expo-app-loading'
 import {ThemeProvider} from './themes/theme-context'
 import Vista from './Vista'
+import store from './store'
+import { Provider } from 'react';
 
 const App = () => {
 
@@ -18,10 +20,12 @@ const App = () => {
     )
   }
   return (
-    <ThemeProvider>
-      <Vista />
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider>
+        <Vista />
+        <StatusBar style="auto" />
+      </ThemeProvider>
+    </Provider>
   );
 }
 
