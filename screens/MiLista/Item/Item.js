@@ -5,7 +5,7 @@ import Modal from '../Modal/Modal'
 import { AZULES } from '../../../constants/colors';
 import Card from '../../../componentes/Card/Card';
 
-const Item = ({ item,data,setData,navigation }) => {
+const Item = ({ item,navigation }) => {
 
     const [modalVisible, setModalVisible] = useState(false)
     const [itemSelected, setItemSelected] = useState({})
@@ -35,7 +35,7 @@ const Item = ({ item,data,setData,navigation }) => {
                 <Button title='<3'/>
                 <Button title='Eliminar' onPress={()=> {onHandlerModal(item.id)}} />
               </View>
-              <Modal item={itemSelected} setModalVisible={setModalVisible} setItemSelected={setItemSelected} data={data} setData={setData} visible={modalVisible}/>
+              <Modal item={itemSelected} setModalVisible={setModalVisible} setItemSelected={setItemSelected} visible={modalVisible}/>
             </Card>)
         };
 

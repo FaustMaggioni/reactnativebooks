@@ -4,8 +4,8 @@ import * as Font from 'expo-font'
 import AppLoading from 'expo-app-loading'
 import {ThemeProvider} from './themes/theme-context'
 import Vista from './Vista'
-import store from './store'
-import { Provider } from 'react';
+import store from './store/index'
+import {Provider}  from 'react-redux';
 
 const App = () => {
 

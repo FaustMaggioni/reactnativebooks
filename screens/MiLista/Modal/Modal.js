@@ -1,11 +1,15 @@
 import React from 'react';
 import { Modal as RNModal, Button, View,  Text } from 'react-native';
 import {styles} from './styles.js'
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteArticulo } from '../../../store/actions/articulo.actions.js';
 
-const Modal = ({item, setItemSelected, setModalVisible, setData, visible}) =>{
-    
+const Modal = ({item, setItemSelected, setModalVisible, visible}) =>{
+    const dispatch = useDispatch()
+
     const removeItem = (id) =>{
-        setData(data => data.filter((item) => item.id !== id))
+        dispatch(deleteArticulo(id))
+        //setData(data => data.filter((item) => item.id !== id))
     }
     const onHandlerDelete = () =>{
         removeItem(item.id)

@@ -9,3 +9,4 @@ export const deleteArticulo = (id) => ({
     type: DELETE_ARTICULO,
     payload: id
 })
+
