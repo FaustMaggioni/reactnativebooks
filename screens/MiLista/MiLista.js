@@ -29,7 +29,7 @@ const MiLista = ({navigation}) =>{
         style={styles.lista}
         data={data}
         refreshing={false}
-        onRefresh={() => ingresar}
+        onRefresh={() => dispatch(showForm())}
         renderItem={renderItem}
         ListEmptyComponent= { <Placeholder title='No has escrito nada aún' subtitle='Refresca para escribir algo!'/> }    
       />

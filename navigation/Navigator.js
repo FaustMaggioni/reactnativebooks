@@ -3,15 +3,17 @@ import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
 import MiLista from '../screens/MiLista/MiLista'
 import Articulo from '../screens/ArticuloScreen/Articulo'
+import { useSelector } from 'react-redux';
+
 const Stack = createStackNavigator()
-//contiene navigator y screen
 
 const AppNavigator = () => {
+    const {title}= useSelector(state => state.screen.selected)
     return (
     <NavigationContainer>
         <Stack.Navigator initialRouteName='Mi Lista'>
             <Stack.Screen name='Mi Lista' component={MiLista}/>
-            <Stack.Screen name='Articulo' options={({route}) => ({title: route.params.title})} component={Articulo}/>
+            <Stack.Screen name='Articulo'  options={() => ({title:title})}component={Articulo}/>
         </Stack.Navigator>
     </NavigationContainer>
 )}

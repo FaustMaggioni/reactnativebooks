@@ -45,16 +45,16 @@ const IngresarArticulo = () => {
     return (
         <Modal animationType='slide' visible={visible} >
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <KeyboardAvoidingView style={styles.form} keyboardVerticalOffset={Dimensions.get('window').height/3} behavior='padding'>
+        <KeyboardAvoidingView style={styles.form} keyboardVerticalOffset={Dimensions.get('window').height/4} behavior='padding'>
           <Text style={styles.leer}> ¿Qué vas a escribir hoy? </Text>
           <Image style={styles.stretch} source={require('../../../../assets/libros.png')} />
           <InputGen onSubmitEditing= {() => addItem()} style={[styles.title, styles.txtInput] } value={title} onChangeText={setTitle} placeholder='Titulo'/>
           <InputGen  onSubmitEditing= {() => addItem()} style={[styles.title, styles.txtInput] } value={subtitle}  onChangeText={setSubtitle} placeholder='Subtitulo'/>
           <View style={styles.btnContainer}>
-          <TouchableHighlight activeOpacity={0.3} underlayColor={AZULES.dark} style={[styles.btn, styles.cancelar]} onPress={() => cancelar()}>
+          <TouchableHighlight activeOpacity={0.3} underlayColor={AZULES.dark} style={[styles.btn, styles.cancelar]} onPress={cancelar}>
               <Text> Cancelar </Text>
             </TouchableHighlight>
-            <TouchableHighlight activeOpacity={0.3} underlayColor={AZULES.primary} style={[styles.btn, styles.añadir]} onPress={() => addItem()}>
+            <TouchableHighlight activeOpacity={0.3} underlayColor={AZULES.primary} style={[styles.btn, styles.añadir]} onPress={addItem}>
               <Text> Añadir </Text>
             </TouchableHighlight>
           </View>
