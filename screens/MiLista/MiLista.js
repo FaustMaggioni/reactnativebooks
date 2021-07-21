@@ -5,7 +5,7 @@ import {styles} from './styles.js'
 import Item from './Item/Item'
 import Input from './Input/Input'
 import Placeholder from '../../componentes/Placeholder/Placeholder'
-import Articulo  from '../ArticuloScreen/Articulo.js';
+import Footer  from '../../componentes/Footer/Footer'
 import Lista from '../../componentes/Lista/Lista'
 import { showForm } from '../../store/actions/ingresar.actions.js';
 
@@ -33,6 +33,7 @@ const MiLista = ({navigation}) =>{
         renderItem={renderItem}
         ListEmptyComponent= { <Placeholder title='No has escrito nada aún' subtitle='Refresca para escribir algo!'/> }    
       />
+      <Footer/>
       </View>
     )
 }

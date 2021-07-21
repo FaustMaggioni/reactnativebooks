@@ -1,9 +1,7 @@
 import React, {useState,Component, useContext } from 'react';
 import {SafeAreaView,View, Switch} from 'react-native';
 import {styles} from './styles.js'
-import MiLista from './screens/MiLista/MiLista'
 import Header from './componentes/Header/Header'
-import Footer from './componentes/Footer/Footer'
 import {ThemeContext} from './themes/theme-context'
 import Navigator from './navigation';
 
@@ -21,7 +19,6 @@ const Vista = () => {
           />
           */}
           <Navigator/>
-          <Footer/>
         </SafeAreaView>
     )
 }

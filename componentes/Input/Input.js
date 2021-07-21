@@ -49,6 +49,7 @@ const Input = props => {
       dispatch({
           type: INPUT_CHANGE,
           value: text,
+          isValid,
       })
     }
 
@@ -60,10 +61,14 @@ const Input = props => {
             <Text>
                 {props.label}
             </Text>
-            <TextInput {...props} style={styles.input} onChangeText={textChangeHandler} onBlur={onBlurHandler}/>
+            <TextInput 
+                {...props} 
+                style={styles.input} 
+                onChangeText={textChangeHandler} 
+                onBlur={onBlurHandler}/>
             {!inputState.isValid && inputState.touched && (
                 <View>
-                    <Text>
+                    <Text style={styles.errorText}>
                         {props.errorText}
                     </Text>
                 </View>

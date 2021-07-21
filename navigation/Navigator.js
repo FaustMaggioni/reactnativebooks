@@ -8,11 +8,12 @@ import { useSelector } from 'react-redux';
 const Stack = createStackNavigator()
 
 const AppNavigator = () => {
-    const {title}= useSelector(state => state.screen.selected)
+    const data = useSelector(state => state.screen.selected)
+    console.log('DATA: ',data)
     return (
         <Stack.Navigator initialRouteName='Mi Lista'>
             <Stack.Screen name='Mi Lista' component={MiLista}/>
-            <Stack.Screen name='Articulo'  options={() => ({title:title})}component={Articulo}/>
+            <Stack.Screen name='Articulo'  options={() => ({title: data.title })}component={Articulo}/>
         </Stack.Navigator>
 )}
 

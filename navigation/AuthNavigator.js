@@ -6,8 +6,10 @@ import AuthScreen from '../screens/User/AuthScreen';
 
 const AuthStack = createStackNavigator()
 
-const AuthNavigator = () =>{
+const AuthNavigator = () => (
     <AuthStack.Navigator initialRouteName='Login' screenOptions={{headerShown: false}}>
         <AuthStack.Screen name='Login' component={AuthScreen}/>
     </AuthStack.Navigator>
-}
+)
+
+export default AuthNavigator
