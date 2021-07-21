@@ -5,7 +5,7 @@ import MiLista from './screens/MiLista/MiLista'
 import Header from './componentes/Header/Header'
 import Footer from './componentes/Footer/Footer'
 import {ThemeContext} from './themes/theme-context'
-import AppNavigator from './navigation/Navigator';
+import Navigator from './navigation';
 
 const Vista = () => {
     const { dark, theme, toggle } = useContext(ThemeContext);
@@ -20,8 +20,8 @@ const Vista = () => {
             value={dark}
           />
           */}
-        <AppNavigator/>
-        <Footer/>
+          <Navigator/>
+          <Footer/>
         </SafeAreaView>
     )
 }

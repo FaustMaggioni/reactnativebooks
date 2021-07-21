@@ -10,12 +10,10 @@ const Stack = createStackNavigator()
 const AppNavigator = () => {
     const {title}= useSelector(state => state.screen.selected)
     return (
-    <NavigationContainer>
         <Stack.Navigator initialRouteName='Mi Lista'>
             <Stack.Screen name='Mi Lista' component={MiLista}/>
             <Stack.Screen name='Articulo'  options={() => ({title:title})}component={Articulo}/>
         </Stack.Navigator>
-    </NavigationContainer>
 )}
 
 export default AppNavigator
