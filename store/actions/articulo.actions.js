@@ -5,13 +5,14 @@ export const addArticulo = (item) => {
     console.log('ITEM: ',item)
     return async dispatch => {
         try {
-            await fetch(`${URL_API}/articulos.json`, {
+            await fetch(`${URL_API}/articulos/${item.id}.json`, {
                 method:'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({date: Date.now(), item })
             })
+
             dispatch({
                 type: ADD_ARTICULO,
                 payload: item,
@@ -33,9 +34,13 @@ export const getArticulos = () => {
                 },
             });
             const result = await response.json()
-            const values = Object.values(result)
-            const keys = Object.keys(result)
-            const arrResult = values.map((k,i) => ({...k.item, id: keys[i]}))
+            const aux = Object.values(result)
+            const arrResult = aux.map((a)=>{
+                console.log('B: ',)
+                const obj = Object.values(a)
+                const item = obj[0].item
+                return item
+            })
             dispatch(
                 {type: GET_ARTICULOS, payload: arrResult}
                 )

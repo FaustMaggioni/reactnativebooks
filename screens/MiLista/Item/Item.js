@@ -39,7 +39,7 @@ const Item = ({ item,navigation }) => {
               </TouchableHighlight>
               <View style={styles.btns}>
                 <Button title='<3'/>
-                <Button title='Eliminar' onPress={()=> {onHandlerModal(item.id)}} />
+                <Button title='Eliminar' onPress={onHandlerModal} />
               </View>
               <Modal item={itemSelected} setModalVisible={setModalVisible} setItemSelected={setItemSelected} visible={modalVisible}/>
             </Card>)

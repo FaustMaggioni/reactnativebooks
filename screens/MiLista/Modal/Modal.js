@@ -9,7 +9,6 @@ const Modal = ({item, setItemSelected, setModalVisible, visible}) =>{
 
     const removeItem = (id) =>{
         dispatch(deleteArticulo(id))
-        //setData(data => data.filter((item) => item.id !== id))
     }
     const onHandlerDelete = () =>{
         removeItem(item.id)
