@@ -3,8 +3,6 @@ import {AZULES} from '../../../constants/colors'
 
 
 export const styles = StyleSheet.create({
-
-    
     title:{
         fontFamily: 'sansbold',
         fontSize: 25
@@ -21,14 +19,10 @@ export const styles = StyleSheet.create({
         borderBottomRightRadius: 5,
         justifyContent: 'space-around',
     },
-
     touchable:{
         width: '100%',
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
     },
-
-
-
 })

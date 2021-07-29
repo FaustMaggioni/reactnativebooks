@@ -1,7 +1,8 @@
 import { StyleSheet } from "react-native"
 import {AZULES} from "../../../constants/colors"
 
-export const styles = StyleSheet.create({
+export const styles = StyleSheet.create(
+    {
     modal:{
         alignItems: 'center',
         justifyContent: 'center',
@@ -31,7 +32,6 @@ export const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: '400'
     },
-    
     title:{
         flex: 1,
         padding: 5,

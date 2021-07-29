@@ -4,7 +4,6 @@ import {COLORS, AZULES} from '../../constants/colors'
 
   export const styles = StyleSheet.create({
     lista:{
-        height: '85%',
-        marginTop: '15%'
+        height: '100%',
     },
   });

@@ -3,7 +3,7 @@ import {StyleSheet, View, Text, KeyboardAvoidingView, Button, Alert} from 'react
 import Input from '../../componentes/Input/Input'
 import { AZULES } from '../../constants/colors'
 import {useDispatch} from 'react-redux'
-import { signup } from '../../store/actions/auth.actions'
+import { signup, login } from '../../store/actions/auth.actions'
 
 
 const FORM_INPUT_UPDATE = 'FORM_INPUT_UPDATE'
@@ -58,14 +58,21 @@ const AuthScreen = () => {
     })
   }, [dispatchFormState])
 
-  const onSignupHandler = () =>{
+  const onSignupHandler = async () =>{
     try{
-      dispatch(signup(formState.inputValues.email, formState.inputValues.password))
+      await dispatch(signup(formState.inputValues.email, formState.inputValues.password))
     }catch(err){
       setError(err.message)
     }
   }
 
+  const onLoginHandler = async () => {
+    try {
+      await dispatch(login(formState.inputValues.emial, formState.inputValues.password))
+    } catch (err) {
+      setError(err.message)
+    }
+  }
   const [error,setError] = useState(null)
 
   useEffect(()=>{
@@ -101,7 +108,7 @@ const AuthScreen = () => {
                 />
               <View style={styles.footer}>
                 <View style={styles.buttton}>
-                  <Button title='Acceder' color={AZULES.dark} onPress={onSignupHandler}/>
+                  <Button title='Acceder' color={AZULES.dark} onPress={onLoginHandler}/>
                 </View>
                 <View style={styles.buttton}>
                   <Button title='Registrarse' color={AZULES.accent} onPress={onSignupHandler}/>

@@ -19,13 +19,16 @@ const Item = ({ item,navigation }) => {
     }
             return(
             <Card >
-              <TouchableHighlight style={styles.touchable} 
-              activeOpacity={0.3} underlayColor={AZULES.accent} 
+              <TouchableHighlight 
+              style={styles.touchable} 
+              activeOpacity={0.3} 
+              underlayColor={AZULES.accent} 
               onPress={() => {
                 const articulo = {
                   title: item.title,
                   subtitle: item.subtitle,
-                }
+                  body: item.body,
+                };
                 dispatch(goToArticulo(articulo))
                 navigation.navigate('Articulo')
                 }}>

@@ -2,14 +2,11 @@ import React from 'react'
 import {View,Text, Image} from 'react-native'
 import {styles} from './styles.js'
 
-const Placeholder = ({title,subtitle}) => {
+const Placeholder = ({title}) => {
     return (
         <View style={styles.card}>
             <Text style={styles.cardTitle}>
                 {title}
-            </Text>
-            <Text style={styles.cardSubtitle}>
-                {subtitle}
             </Text>
             <Image
             style={styles.stretch}
