@@ -34,9 +34,8 @@ export const getArticulos = () => {
                 },
             });
             const result = await response.json()
-            const aux = Object.values(result)
-            const arrResult = aux.map((a)=>{
-                console.log('B: ',)
+            const resultValues = Object.values(result)
+            const arrResult = resultValues.map((a)=>{
                 const obj = Object.values(a)
                 const item = obj[0].item
                 return item
